@@ -30,8 +30,11 @@
 <%@ page import="java.util.Date, java.text.DateFormat, java.util.Locale" %>
 
 <center>
-Copyright © 2004 - <a href="http://jmws.dyndns.org:8082/">JMWS</a><br>
+Copyright © 2004 - <a href="http://jmws.dyndns.org:8082/" 
+		class="black">JMWS</a><br>
+Written by <a href="mailto:mikaelbarbeaux@users.berlios.de"
+		class="black">MikaelB</a><br>
 <%= DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, 
 			request.getLocale()).format(new Date()) %>
 </center>
-<br><br>
+<br>
