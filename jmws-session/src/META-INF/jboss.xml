@@ -18,6 +18,11 @@
 			<jndi-name>jmws/session/UserManagement</jndi-name>
 		</session>		
 		
+		<session>
+			<ejb-name>UserLogIn</ejb-name>
+			<jndi-name>jmws/session/UserLogIn</jndi-name>
+		</session>	
+		
 	</enterprise-beans>
 	
 </jboss>	

@@ -41,6 +41,19 @@
 			<session-type>Stateless</session-type>
 			<transaction-type>Container</transaction-type>
 		</session>
+		
+		<!-- Session Bean : UserLogIn -->
+		
+		<session>
+			<display-name>UserLogIn SessionBean</display-name>
+			<ejb-name>UserLogIn</ejb-name>
+			<home>org.jmws.session.user.login.UserLogInHome</home>
+			<remote>org.jmws.session.user.login.UserLogInRemote</remote>
+			<ejb-class>org.jmws.session.user.login.UserLogIn</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+				
 	
 	</enterprise-beans>
 	

@@ -49,7 +49,19 @@ import org.jmws.entity.user.UserLocalHome;
  */
 public class UserLogIn implements SessionBean {
 
+	// JNDI name
+	public static final String JNDI_NAME = "jmws/session/UserLogIn";
 
+	/**
+	 * Checks for log in for that User.
+	 * 
+	 * @param login
+	 * @param password
+	 * @return
+	 * @throws FinderException
+	 * @throws UserWrongPasswordException
+	 * @throws UserInactiveException
+	 */
 	public Boolean checkLogIn(
 		String login,
 		String password
