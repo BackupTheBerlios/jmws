@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<tiles-definitions>
+
+	<!-- Default template definition -->
+	
+		<!-- Main layout -->
+		<definition name="jmws.default.mainLayout" 
+				path="/templates/default/template.jsp">
+			<put name="title" value="TO MODIFY" />
+			<put name="banner" value="/tiles/default/banner.jsp" />
+			<put name="menubar" value="/tiles/default/menubar.jsp" />
+			<put name="loginbar" value="/tiles/default/loginbar.jsp" />
+			<put name="menu" value="/tiles/default/menu.jsp" />
+			<put name="body" value="TO MODIFY" />
+			<put name="footer" value="/tiles/default/footer.jsp" />
+		</definition>
+	
+		<!-- index JSP layout -->
+		<definition name="jmws.default.index" 
+				extends="jmws.default.mainLayout">
+			<put name="title" value="Homepage" />
+			<put name="body" value="/tiles/bodies/index.jsp" />
+		</definition>
+		
+	<!-- End of Default template definition -->
+
+
+
+</tiles-definitions>

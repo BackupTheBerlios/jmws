@@ -1,0 +1,130 @@
+BODY, DIV, TD, P, INPUT, SELECT, TEXTAREA {
+        FONT-FAMILY: Verdana, Arial, Helvetica, Sans-serif; 
+        COLOR: #000000; 
+        FONT-SIZE: 11px; 
+}
+
+BODY {
+	BACKGROUND-POSITION: left top; 
+	BACKGROUND-REPEAT: repeat-y;
+	BACKGROUND-COLOR: #C0C0C0; 
+	MARGIN: 0px;
+	MARGIN-TOP: 0px; 
+	MARGIN-BOTTOM: 0px; 
+	MARGIN-LEFT: 0px; 
+	MARGIN-RIGHT: 0px
+}
+
+A:link {
+	FONT-FAMILY: verdana;
+	COLOR: #0069B2;
+	TEXT-DECORATION: none;
+}
+
+A:visited {
+	FONT-FAMILY: verdana;
+	COLOR: #0069B2;
+	TEXT-DECORATION: none;
+}
+
+A:hover, A:active {
+	FONT-FAMILY: verdana;
+	COLOR: #0069B2;
+	TEXT-DECORATION: underline;
+}
+
+A.menu:link {
+	FONT-FAMILY: verdana;
+	COLOR: #0069B2;
+	TEXT-DECORATION: none;
+	FONT-WEIGHT: bolder;
+	FONT-SIZE: 12px;
+}
+
+A.menu:visited {
+	FONT-FAMILY: verdana;
+	COLOR: #0069B2;
+	TEXT-DECORATION: none;
+	FONT-WEIGHT: bolder;
+	FONT-SIZE: 12px;
+}
+
+A.menu:hover, A:active {
+	FONT-FAMILY: verdana;
+	COLOR: #0069B2;
+	TEXT-DECORATION: underline;
+	FONT-WEIGHT: bolder;
+	FONT-SIZE: 12px;
+}
+
+A.black:link {
+	FONT-FAMILY: verdana;
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+	FONT-WEIGHT: bolder;
+}
+
+A.black:visited {
+	FONT-FAMILY: verdana;
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+	FONT-WEIGHT: bolder;
+}
+
+A.black:hover, A:active {
+	FONT-FAMILY: verdana;
+	COLOR: #000000;
+	TEXT-DECORATION: underline;
+	FONT-WEIGHT: bolder;
+}
+
+H1 { 
+	FONT-FAMILY: verdana;
+	COLOR: #0069B2;
+	TEXT-DECORATION:  none; 
+	FONT-SIZE: 13px;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: left;
+	FONT-VARIANT: small-caps;
+	LETTER-SPACING: 0px;
+	BORDER-BOTTOM: 1px solid #0069B2;
+}
+
+H2 { 
+	FONT-FAMILY: verdana;
+	COLOR: #FF9315;
+	TEXT-DECORATION:  none; 
+	FONT-SIZE: 12px;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: left;
+	FONT-VARIANT: small-caps;
+	LETTER-SPACING: 0px;
+}
+
+H3 { 
+	FONT-FAMILY: verdana;
+	COLOR: #000000;
+	TEXT-DECORATION:  none; 
+	FONT-SIZE: 12px;
+	FONT-WEIGHT: bold;
+	TEXT-ALIGN: left;
+	FONT-VARIANT: small-caps;
+	LETTER-SPACING: 0px;
+	BORDER-BOTTOM: 1px solid #000000;
+}
+
+TABLE.maintable {
+	BORDER: 1px;
+	BORDER-BOTTOM: 0px;
+	BORDER-TOP: 0px;
+	BORDER-LEFT: 1px solid #000000;
+	BORDER-RIGHT: 1px solid #000000;
+}
+
+TD.tdmaintable {
+	BORDER: 1px;
+	BORDER-LEFT: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	BORDER-BOTTOM: 1px solid #000000;
+}
