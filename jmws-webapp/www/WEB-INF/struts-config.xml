@@ -7,111 +7,19 @@
 
 	<data-sources />
 
-	<form-beans>
-	
-		<form-bean name="NewUserFormBean"
-				type="org.apache.struts.validator.DynaValidatorForm">			
-			
-			<description>Form for creating of a new User</description>
-			<form-property name="username" type="java.lang.String" />
-			<form-property name="password" type="java.lang.String" />
-		</form-bean>
-		
-		<form-bean name="UpdateUserSettingsFormBean"
-				type="org.apache.struts.validator.DynaValidatorForm">
-			
-			<description>Form for updating User settings</description>
-			<form-property name="username" type="java.lang.String" />
-			<form-property name="fullname" type="java.lang.String" />
-			<form-property name="newpassword" type="java.lang.String" />
-			<form-property name="email" type="java.lang.String" />
-			<form-property name="homepage" type="java.lang.String" />
-			<form-property name="signature" type="java.lang.String" />
-			<form-property name="avatar" type="java.lang.String" />
-			<form-property name="biography" type="java.lang.String" />
-			<form-property name="location" type="java.lang.String" />
-			<form-property name="occupation" type="java.lang.String" />
-			<form-property name="icq" type="java.lang.String" />
-			<form-property name="aim" type="java.lang.String" />
-			<form-property name="msn" type="java.lang.String" />
-			<form-property name="yahoo" type="java.lang.String" />
-			<form-property name="lang" type="java.lang.String" />			
-		</form-bean>
-		
-		<form-bean name="LoginFormBean"
-				type="org.apache.struts.validator.DynaValidatorForm">
-		
-			<description>Form for log in</description>
-			<form-property name="username" type="java.lang.String" />
-			<form-property name="password" type="java.lang.String" />
-		</form-bean>
-	
-	</form-beans>
+	<form-beans />
 
 	<global-exceptions />
 
 	<global-forwards />
 
-	<action-mappings>
-	
-		<action path="/newUser"
-			type="org.jmws.webapp.actions.NewUserAction"
-			name="NewUserFormBean"
-			scope="request"
-			validate="true"
-			input="/newuser.jsp">
-			
-			<description>Create a new User</description>
-			<forward name="success" path="/newuser.jsp?success=1" />
-			<forward name="failed" path="/newuser.jsp?failed=1" />
-		</action>
-		
-		<action path="/updateUserSettings"
-			type="org.jmws.webapp.actions.UpdateUserSettingsAction"
-			name="UpdateUserSettingsFormBean"
-			scope="request"
-			validate="true"
-			input="/usersettings.jsp">
-		
-			<description>Update User's settings</description>
-			<forward name="success" path="/usersettings.jsp?success=1" />
-			<forward name="failed" path="/usersettings.jsp?failed=1" />
-		</action>
-		
-		<action path="/login"
-			type="org.jmws.webapp.actions.LoginAction"
-			name="LoginFormBean"
-			scope="request"
-			validate="true"
-			input="/index.jsp">
-		
-			<description>Log in</description>
-			<forward name="success" path="/index.jsp?success=1" />
-			<forward name="failed" path="/index.jsp?failed=1" />
-		</action>
-		
-		<action path="/logout"
-			type="org.jmws.webapp.actions.LogoutAction"
-			scope="request"
-			validate="false"
-			input="/index.jsp">
-		
-			<description>Log out</description>
-			<forward name="success" path="/index.jsp?logout=1" />
-			<forward name="failed" path="/index.jsp?logoutfailed=1" />
-		</action>
-	
-	</action-mappings>
+	<action-mappings />
 
 	<controller />
 
-	<message-resources 
-		parameter="org.jmws.webapp.resources.ApplicationResources" />
+	<message-resources />
 	
-	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
-    	<set-property property="pathnames"
-        	value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
-  	</plug-in>
+	<plug-in />
 
 </struts-config>
 

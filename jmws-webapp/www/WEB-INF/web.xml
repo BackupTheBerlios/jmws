@@ -23,24 +23,6 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	
-	<servlet>
-		<servlet-name>index</servlet-name>
-		<jsp-file>/index.jsp</jsp-file>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
-	
-	<servlet>
-		<servlet-name>newuser</servlet-name>
-		<jsp-file>/newuser.jsp</jsp-file>
-		<load-on-startup>2</load-on-startup>
-	</servlet>
-	
-	<servlet>
-		<servlet-name>usersettings</servlet-name>
-		<jsp-file>/usersettings.jsp</jsp-file>
-		<load-on-startup>2</load-on-startup>
-	</servlet>
-	
 	<servlet-mapping>
 		<servlet-name>action</servlet-name>
 		<url-pattern>*.do</url-pattern>

@@ -7,40 +7,7 @@
 
 <form-validation>
 
-	<formset>
-		
-		<form name="NewUserFormBean">
-			<field property="username" depends="activeSubmit">
-				<arg0 key="NewUserFormBean.username" />
-			</field>
-			<field property="password" depends="activeSubmit">
-				<arg0 key="NewUserFormBean.password" />
-			</field>		
-		</form>
-		
-		<form name="UpdateUserSettingsFormBean">
-			<field property="username" depends="activeSubmit">
-				<arg0 key="UpdateUserSettingsFormBean.username" />
-			</field>
-			<field property="fullname" depends="activeSubmit">
-				<arg0 key="UpdateUserSettingsFormBean.fullname" />
-			</field>
-			<field property="email" depends="email,activeSubmit">
-				<arg0 key="UpdateUserSettingsFormBean.email" />
-			</field>
-		</form>
-		
-		<form name="LoginFormBean">
-			<field property="username" depends="activeSubmit">
-				<arg0 key="LoginFormBean.username" />
-			</field>
-			<field property="password" depends="activeSubmit">
-				<arg0 key="LoginFormBean.password" />
-			</field>
-		</form>
 	
-	</formset>
-
 </form-validation>
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:UseCaseDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" metadata="nsuml-1.4" initialized="true" scrolledY="148">
-  <children xsi:type="editmodel:UseCaseActorEditModel" location="93,34" size="78,100" targetConnections="//@children.1/@sourceConnections.1" itemName="User">
+<editmodel:UseCaseDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" metadata="nsuml-1.4" initialized="true" scrolledY="195">
+  <children xsi:type="editmodel:UseCaseActorEditModel" location="93,34" size="78,100" targetConnections="//@children.1/@sourceConnections.1" itemName="Unknown">
     <sourceConnections xsi:type="editmodel:UseCaseAssociationEditModel" connectionRouterKind="Manual" source="//@children.0" target="//@children.9" targetEnd="//@children.0/@sourceConnections.0/@children.1" sourceEnd="//@children.0/@sourceConnections.0/@children.0">
       <children xsi:type="editmodel:UseCaseEndEditModel" location="78,42" attachSource="true"/>
       <children xsi:type="editmodel:UseCaseEndEditModel" location="1,19"/>
