@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE jbosscmp-jdbc PUBLIC 
 	"-//JBoss//DTD JBOSSCMP-JDBC 3.2//EN" 
-	"jbosscmp-jdbc_3_2.dtd">
+	"file://jbosscmp-jdbc_3_2.dtd">
 
 <jbosscmp-jdbc>
 	

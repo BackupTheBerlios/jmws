@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE jboss PUBLIC 
 	"-//JBoss//DTD JBOSS 3.2//EN" 
-	"jboss_3_2.dtd">
+	"file://jboss_3_2.dtd">
 
 	
 <jboss>

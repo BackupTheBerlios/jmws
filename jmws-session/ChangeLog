@@ -27,6 +27,7 @@
 ###############################################################################
 
 2004/03/24 Mikael Barbeaux
+	* Fixed a bug into dtd files uri.
 	* Added every dtd files for XML validation.
 
 2004/03/04 Mikael Barbeaux
