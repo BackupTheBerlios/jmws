@@ -171,7 +171,7 @@
 			
 			<ejb-relationship-role>
 				<ejb-relationship-role-name>User->Activator</ejb-relationship-role-name>
-				<multiplicity>One</multiplicity>
+				<multiplicity>Many</multiplicity>
 				
 				<relationship-role-source>
 					<description>A User</description>
@@ -187,7 +187,7 @@
 			
 			<ejb-relationship-role>
 				<ejb-relationship-role-name>Activator->User</ejb-relationship-role-name>
-				<multiplicity>Many</multiplicity>
+				<multiplicity>One</multiplicity>
 				
 				<relationship-role-source>
 					<description>A Activator</description>

@@ -72,7 +72,10 @@
 				<column-name>pk_value</column-name>
 				<not-null />
 			</cmp-field>	
+			
 		</entity>	
+		
+		
 		
 	</enterprise-beans>
 	
@@ -93,13 +96,7 @@
 		
 		<ejb-relation>
 			<ejb-relation-name>ManyUsers-1Activator</ejb-relation-name>
-			
-			<relation-table-mapping>
-				<table-name>jmws_users_activator</table-name>
-				<create-table>true</create-table>
-				<remove-table>false</remove-table>
-				<pk-constraint>true</pk-constraint>
-			</relation-table-mapping>
+			<foreign-key-mapping /> <!-- Only for 1<->Many -->
 			
 			<ejb-relationship-role>
 				<ejb-relationship-role-name>User->Activator</ejb-relationship-role-name>

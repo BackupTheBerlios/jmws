@@ -28,6 +28,7 @@
 
 
 2004/03/25 Mikael Barbeaux
+	* Change CMR mapping for User<->Activator.
 	* Written a primary key (Long only) generator.
 	* Written JDBC deployment descriptor for CMR fields
 	into User and UserInfos.
