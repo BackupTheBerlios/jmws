@@ -26,6 +26,10 @@
 # This also helps in backtracking changes, or reviewing development history.  #
 ###############################################################################
 
+2004/03/29 Mikael Barbeaux
+	* Added Log In sequence diagram.
+	* Added Log In use case.
+
 2004/03/25 Mikael Barbeaux
 	* Updated Classes diagrams for User and UserInfos.
 
