@@ -5,4 +5,44 @@
 
 <jbosscmp-jdbc>
 	
+	<defaults>
+	
+		<datasource>java:/PostgresDS</datasource>
+		<datasource-mapping>PostgreSQL 7.2</datasource-mapping>
+		
+		<create-table>true</create-table>
+		<remove-table>false</remove-table>
+		<read-only>false</read-only>
+		<read-time-out>300</read-time-out>	
+		<row-locking>false</row-locking>
+		
+	</defaults>
+	
+	<enterprise-beans>
+		
+		<entity>
+			<ejb-name>User</ejb-name>
+			<create-table>true</create-table>
+			<pk-constraint>true</pk-constraint>
+			<table-name>jmws_users</table-name>
+			
+			<cmp-field>
+				<field-name>login</field-name>
+				<column-name>user_login</column-name>
+				<not-null />
+			</cmp-field>
+			<cmp-field>
+				<field-name>password</field-name>
+				<column-name>user_pwd</column-name>
+				<not-null />
+			</cmp-field>
+			<cmp-field>
+				<field-name>active</field-name>
+				<column-name>user_active</column-name>
+				<not-null />
+			</cmp-field>
+		</entity>
+		
+	</enterprise-beans>
+	
 </jbosscmp-jdbc>

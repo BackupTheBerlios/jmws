@@ -3,3 +3,60 @@
 	"-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" 
 	"http://java.sun.com/dtd/ejb-jar_2_0.dtd">
 
+
+<ejb-jar>
+
+	<description><![CDATA[No Description.]]></description>
+	<display-name>ejb-jar.xml - JMWS entity</display-name>
+	
+	
+	<enterprise-beans>
+	
+		<entity>
+			
+			<display-name>User EntityBean</display-name>
+			<ejb-name>User</ejb-name>
+			<local-home>org.jmws.entity.user.UserLocalHome</local-home>
+			<local>org.jmws.entity.user.UserLocal</local>
+			<ejb-class>org.jmws.entity.user.User</ejb-class>
+			<persistence-type>Container</persistence-type>
+			<prim-key-class>java.lang.String</prim-key-class>
+			<reentrant>false</reentrant>
+			
+			<cmp-version>2.x</cmp-version>
+			<abstract-schema-name>User</abstract-schema-name>
+			
+			<cmp-field>
+				<description>User's login (primary key)</description>
+				<field-name>login</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>User's password (crypted with MD5)</description>
+				<field-name>password</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>User's active state</description>
+				<field-name>active</field-name>
+			</cmp-field>
+			
+			<primkey-field>login</primkey-field>
+			
+			<query>
+				<description>Find Users by their active state</description>
+				<query-method>
+					<method-name>findByActive</method-name>
+					<method-params>
+						<method-param>java.lang.Boolean</method-param>
+					</method-params>
+				</query-method>
+				<ejb-ql>SELECT OBJECT(u) FROM User u
+							WHERE u.user_active = ?1					
+				</ejb-ql>
+			</query>		
+		
+		</entity>
+	
+	</enterprise-beans>
+
+
+</ejb-jar>

@@ -28,4 +28,5 @@
 
 
 2004/03/24 Mikael Barbeaux
+	* Implemented first version of User entity bean.
 	* First revision of the project.
