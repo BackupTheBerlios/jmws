@@ -87,6 +87,35 @@
 			
 			<primkey-field>id</primkey-field>		
 		</entity>
+		
+		
+		<!-- Entity Bean : PKGenerator -->
+		
+		<entity>
+
+			<display-name>PKGenerator EntityBean</display-name>
+			<ejb-name>PKGenerator</ejb-name>
+			<local-home>org.jmws.entity.pkgenerator.PKGeneratorLocalHome</local-home>
+			<local>org.jmws.entity.pkgenerator.PKGeneratorLocal</local>
+			<ejb-class>org.jmws.entity.pkgenerator.PKGenerator</ejb-class>
+			<persistence-type>Container</persistence-type>
+			<prim-key-class>java.lang.String</prim-key-class>
+			<reentrant>false</reentrant>
+			
+			<cmp-version>2.x</cmp-version>
+			<abstract-schema-name>PKGenerator</abstract-schema-name>
+			
+			<cmp-field>
+				<description>Table name (primary key)</description>
+				<field-name>table</field-name>
+			</cmp-field>
+			<cmp-field>
+				<description>Current pk value (long only)</description>
+				<field-name>pkValue</field-name>
+			</cmp-field>
+			
+			<primkey-field>table</primkey-field>		
+		</entity>
 	
 	</enterprise-beans>
 

@@ -18,6 +18,11 @@
 			<local-jndi-name>jmws/entity/UserInfos</local-jndi-name>
 		</entity>
 		
+		<entity>
+			<ejb-name>PKGenerator</ejb-name>
+			<local-jndi-name>jmws/entity/PKGenerator</local-jndi-name>
+		</entity>
+		
 		
 	</enterprise-beans>
 

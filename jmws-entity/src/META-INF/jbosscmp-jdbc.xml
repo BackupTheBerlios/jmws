@@ -54,6 +54,24 @@
 				<column-name>infos_id</column-name>
 				<not-null />
 			</cmp-field>	
+		</entity>
+		
+		<entity>
+			<ejb-name>PKGenerator</ejb-name>
+			<create-table>true</create-table>
+			<pk-constraint>true</pk-constraint>
+			<table-name>jmws_pkgenerator</table-name>
+			
+			<cmp-field>
+				<field-name>table</field-name>
+				<column-name>table_name</column-name>
+				<not-null />
+			</cmp-field>
+			<cmp-field>
+				<field-name>pkValue</field-name>
+				<column-name>pk_value</column-name>
+				<not-null />
+			</cmp-field>	
 		</entity>	
 		
 	</enterprise-beans>
