@@ -26,6 +26,10 @@
 # This also helps in backtracking changes, or reviewing development history.  #
 ###############################################################################
 
+2004/03/29 Mikael Barbeaux
+	* Started to implemented UserLogIn action.
+	* Wrote UserWrongPassword and UserInactive exceptions.
+
 2004/03/26 Mikael Barbeaux
 	* Added email field into addUser.
 
