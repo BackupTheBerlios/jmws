@@ -26,6 +26,8 @@
 # This also helps in backtracking changes, or reviewing development history.  #
 ###############################################################################
 
+2004/03/25 Mikael Barbeaux
+	* Implemented first version of UserCreation session bean.
 
 2004/03/24 Mikael Barbeaux
 	* First revision of the project.
