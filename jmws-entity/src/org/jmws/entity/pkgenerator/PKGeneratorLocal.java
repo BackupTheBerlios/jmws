@@ -42,9 +42,8 @@ public interface PKGeneratorLocal extends EJBLocalObject {
 	 * Returns the next primary key value of the 
 	 * given table name.
 	 * 
-	 * @param table
 	 * @return
 	 */
-	public Long getNextPK(String table);
+	public Long getNextPK();
 
 }

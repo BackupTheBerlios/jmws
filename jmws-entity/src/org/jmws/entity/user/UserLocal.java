@@ -31,6 +31,8 @@ package org.jmws.entity.user;
 
 import javax.ejb.EJBLocalObject;
 
+import org.jmws.entity.user.infos.UserInfosLocal;
+
 public interface UserLocal extends EJBLocalObject {
 	
 	/**
@@ -46,5 +48,12 @@ public interface UserLocal extends EJBLocalObject {
 	 * @param activator
 	 */
 	public void setTheActivator(UserLocal theActivator);
+	
+	/**
+	 * Set the UserInfos of this User.
+	 * 
+	 * @param theUserInfos
+	 */
+	public void setTheUserInfos(UserInfosLocal theUserInfos);
 	
 }

@@ -67,10 +67,9 @@ public abstract class PKGenerator implements EntityBean {
 	 * Returns the next primary key value of the
 	 * given table name.
 	 * 
-	 * @param table
 	 * @return
 	 */
-	public Long getNextPK(String table) {
+	public Long getNextPK() {
 		// Get current value and increment
 		Long pkVal = this.getPkValue();
 		this.setPkValue(new Long(pkVal.longValue()+1));
