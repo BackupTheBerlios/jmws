@@ -26,6 +26,8 @@
 # This also helps in backtracking changes, or reviewing development history.  #
 ###############################################################################
 
+2004/03/26 Mikael Barbeaux
+	* Added email CMP field into User.
 
 2004/03/25 Mikael Barbeaux
 	* Change CMR mapping for User<->Activator.

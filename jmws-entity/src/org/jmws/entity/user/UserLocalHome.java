@@ -42,12 +42,14 @@ public interface UserLocalHome extends EJBLocalHome {
 	 * 
 	 * @param login
 	 * @param password
+	 * @param email
 	 * @return
 	 * @throws CreateException
 	 */
 	public UserLocal create(
 		String login,
-		String password
+		String password,
+		String email
 	) throws CreateException;
 	
 	

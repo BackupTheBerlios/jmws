@@ -35,7 +35,6 @@ import javax.ejb.EJBException;
 import javax.ejb.EntityBean;
 import javax.ejb.EntityContext;
 import javax.ejb.RemoveException;
-
 import org.jmws.entity.user.infos.UserInfosLocal;
 
 /**
@@ -61,6 +60,9 @@ public abstract class User implements EntityBean {
 	public abstract String getPassword();
 	public abstract void setPassword(String password);
 	
+	public abstract String getEmail();
+	public abstract void setEmail(String email);
+	
 	public abstract Boolean getActive();
 	public abstract void setActive(Boolean active);
 	
@@ -83,17 +85,20 @@ public abstract class User implements EntityBean {
 	 * 
 	 * @param login
 	 * @param password
+	 * @param email
 	 * @return
 	 * @throws CreateException
 	 */
 	public String ejbCreate(
 		String login,
-		String password
+		String password,
+		String email
 	) throws CreateException {
 		// Set fields
 		this.setLogin(login);
 		this.setPassword(password);
 		this.setActive(Boolean.FALSE);
+		this.setEmail(email);
 		
 		// Return User primary key
 		return login;
@@ -105,11 +110,13 @@ public abstract class User implements EntityBean {
 	 * 
 	 * @param login
 	 * @param password
+	 * @param email
 	 * @throws CreateException
 	 */
 	public void ejbPostCreate(
 		String login,
-		String password
+		String password,
+		String email
 	) throws CreateException {
 		
 	}

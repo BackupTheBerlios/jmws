@@ -37,6 +37,11 @@
 				<not-null />
 			</cmp-field>
 			<cmp-field>
+				<field-name>email</field-name>
+				<column-name>user_email</column-name>
+				<not-null />
+			</cmp-field>
+			<cmp-field>
 				<field-name>active</field-name>
 				<column-name>user_active</column-name>
 				<not-null />
