@@ -27,6 +27,12 @@
 ###############################################################################
 
 
+2004/03/25 Mikael Barbeaux
+	* Written JDBC deployment descriptor for CMR fields
+	into User and UserInfos.
+
 2004/03/24 Mikael Barbeaux
+	* Written deployment descriptor for User and UserInfos.
+	* Implemented first version of UserInfos entity bean.
 	* Implemented first version of User entity bean.
 	* First revision of the project.

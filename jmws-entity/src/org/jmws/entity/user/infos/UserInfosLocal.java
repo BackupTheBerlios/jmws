@@ -2,8 +2,8 @@
  * +---------------------------------------------------------------------------+
  * | JMWS - Java Managed Web System                                            |
  * +---------------------------------------------------------------------------+
- * | UserLocal - Defines the EntityBean Local interface for                    |
- * |             the default User.                                             |
+ * | UserInfosLocal - Defines the EntityBean Local interface                   |
+ * |                  for the default UserInfos.                               |
  * +---------------------------------------------------------------------------+
  * | Copyright (C) 2000,2001 by the following authors:                         |
  * |                                                                           |
@@ -26,25 +26,16 @@
  * |                                                                           |
  * +---------------------------------------------------------------------------+
  */
- 
-package org.jmws.entity.user;
+
+package org.jmws.entity.user.infos;
 
 import javax.ejb.EJBLocalObject;
 
-public interface UserLocal extends EJBLocalObject {
-	
-	/**
-	 * Set the active state of this User.
-	 * 
-	 * @param active
-	 */
-	public void setActive(Boolean active);
-	
-	/**
-	 * Set the Activator of this User.
-	 * 
-	 * @param activator
-	 */
-	public void setTheActivator(UserLocal theActivator);
-	
+/**
+ * UserInfosLocal
+ * 
+ * @author Mikael Barbeaux
+ */
+public interface UserInfosLocal extends EJBLocalObject {
+
 }

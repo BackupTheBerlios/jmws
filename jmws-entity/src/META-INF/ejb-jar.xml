@@ -50,13 +50,117 @@
 					</method-params>
 				</query-method>
 				<ejb-ql>SELECT OBJECT(u) FROM User u
-							WHERE u.user_active = ?1					
+							WHERE u.active = ?1					
 				</ejb-ql>
 			</query>		
+		
+		</entity>
+		
+		<entity>
+
+			<display-name>UserInfos EntityBean</display-name>
+			<ejb-name>UserInfos</ejb-name>
+			<local-home>org.jmws.entity.user.infos.UserInfosLocalHome</local-home>
+			<local>org.jmws.entity.user.infos.UserInfosLocal</local>
+			<ejb-class>org.jmws.entity.user.infos.UserInfos</ejb-class>
+			<persistence-type>Container</persistence-type>
+			<prim-key-class>java.lang.Long</prim-key-class>
+			<reentrant>false</reentrant>
+			
+			<cmp-version>2.x</cmp-version>
+			<abstract-schema-name>UserInfos</abstract-schema-name>
+			
+			<cmp-field>
+				<description>UserInfos's id (primary key)</description>
+				<field-name>id</field-name>
+			</cmp-field>
+			
+			<primkey-field>id</primkey-field>		
 		
 		</entity>
 	
 	</enterprise-beans>
 
+
+
+	<relationships>
+	
+		<ejb-relation>
+			
+			<description>One User, One UserInfos</description>
+			<ejb-relation-name>1User-1UserInfos</ejb-relation-name>
+			
+			<ejb-relationship-role>
+				<ejb-relationship-role-name>UserInfos->User</ejb-relationship-role-name>
+				<multiplicity>One</multiplicity>
+				
+				<relationship-role-source>
+					<description>A UserInfos</description>
+					<ejb-name>UserInfos</ejb-name>
+				</relationship-role-source>
+				
+				<cmr-field>
+					<description>User corresponding to this UserInfos</description>
+					<cmr-field-name>theUser</cmr-field-name>
+				</cmr-field>
+			</ejb-relationship-role>
+			
+			<ejb-relationship-role>
+				<ejb-relationship-role-name>User->UserInfos</ejb-relationship-role-name>
+				<multiplicity>One</multiplicity>
+				
+				<relationship-role-source>
+					<description>A User</description>
+					<ejb-name>User</ejb-name>
+				</relationship-role-source>
+				
+				<cmr-field>
+					<description>UserInfos corresponding to this User</description>
+					<cmr-field-name>theUserInfos</cmr-field-name>
+				</cmr-field>
+			</ejb-relationship-role>
+			
+		</ejb-relation>
+		
+		<ejb-relation>
+			
+			<description>Many User, One Activator</description>
+			<ejb-relation-name>ManyUsers-1Activator</ejb-relation-name>
+			
+			<ejb-relationship-role>
+				<ejb-relationship-role-name>User->Activator</ejb-relationship-role-name>
+				<multiplicity>One</multiplicity>
+				
+				<relationship-role-source>
+					<description>A User</description>
+					<ejb-name>User</ejb-name>
+				</relationship-role-source>
+				
+				<cmr-field>
+					<description>User that activated this user</description>
+					<cmr-field-name>theActivator</cmr-field-name>
+				</cmr-field>
+				
+			</ejb-relationship-role>
+			
+			<ejb-relationship-role>
+				<ejb-relationship-role-name>Activator->User</ejb-relationship-role-name>
+				<multiplicity>Many</multiplicity>
+				
+				<relationship-role-source>
+					<description>A Activator</description>
+					<ejb-name>User</ejb-name>
+				</relationship-role-source>
+				
+				<cmr-field>
+					<description>Every users activated by this user</description>
+					<cmr-field-name>theActivatedUsers</cmr-field-name>
+					<cmr-field-type>java.util.Collection</cmr-field-type>
+				</cmr-field>
+			</ejb-relationship-role>
+			
+		</ejb-relation>
+	
+	</relationships>
 
 </ejb-jar>

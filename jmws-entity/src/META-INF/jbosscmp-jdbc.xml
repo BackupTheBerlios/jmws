@@ -43,6 +43,57 @@
 			</cmp-field>
 		</entity>
 		
+		<entity>
+			<ejb-name>UserInfos</ejb-name>
+			<create-table>true</create-table>
+			<pk-constraint>true</pk-constraint>
+			<table-name>jmws_userinfos</table-name>
+			
+			<cmp-field>
+				<field-name>id</field-name>
+				<column-name>infos_id</column-name>
+				<not-null />
+			</cmp-field>	
+		</entity>	
+		
 	</enterprise-beans>
+	
+	<relationships>
+	
+		<ejb-relation>
+			<ejb-relation-name>1User-1UserInfos</ejb-relation-name>
+			
+			<ejb-relationship-role>
+				<ejb-relationship-role-name>UserInfos->User</ejb-relationship-role-name>
+				<fk-constraint>true</fk-constraint>
+			</ejb-relationship-role>
+			<ejb-relationship-role>
+				<ejb-relationship-role-name>User->UserInfos</ejb-relationship-role-name>
+				<fk-constraint>true</fk-constraint>
+			</ejb-relationship-role>
+		</ejb-relation>	
+		
+		<ejb-relation>
+			<ejb-relation-name>ManyUsers-1Activator</ejb-relation-name>
+			
+			<relation-table-mapping>
+				<table-name>jmws_users_activator</table-name>
+				<create-table>true</create-table>
+				<remove-table>false</remove-table>
+				<pk-constraint>true</pk-constraint>
+			</relation-table-mapping>
+			
+			<ejb-relationship-role>
+				<ejb-relationship-role-name>User->Activator</ejb-relationship-role-name>
+				<fk-constraint>true</fk-constraint>
+			</ejb-relationship-role>
+			
+			<ejb-relationship-role>
+				<ejb-relationship-role-name>Activator->User</ejb-relationship-role-name>
+				<fk-constraint>true</fk-constraint>
+			</ejb-relationship-role>
+		</ejb-relation>
+	
+	</relationships>
 	
 </jbosscmp-jdbc>

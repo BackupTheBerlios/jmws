@@ -2,7 +2,7 @@
  * +---------------------------------------------------------------------------+
  * | JMWS - Java Managed Web System                                            |
  * +---------------------------------------------------------------------------+
- * | User - Defines the EntityBean object for the default User.                |
+ * | UserInfos - Defines the EntityBean object for the default UserInfos.      |
  * +---------------------------------------------------------------------------+
  * | Copyright (C) 2000,2001 by the following authors:                         |
  * |                                                                           |
@@ -26,10 +26,9 @@
  * +---------------------------------------------------------------------------+
  */
 
-package org.jmws.entity.user;
+package org.jmws.entity.user.infos;
 
 import java.rmi.RemoteException;
-import java.util.Collection;
 
 import javax.ejb.CreateException;
 import javax.ejb.EJBException;
@@ -37,82 +36,64 @@ import javax.ejb.EntityBean;
 import javax.ejb.EntityContext;
 import javax.ejb.RemoveException;
 
-import org.jmws.entity.user.infos.UserInfosLocal;
+import org.jmws.entity.user.UserLocal;
 
 /**
- * User entity bean CMP 2.0
+ * UserInfos
  * 
  * @author Mikael Barbeaux
  */
-public abstract class User implements EntityBean {
+public abstract class UserInfos implements EntityBean {
 
 	// JNDI name
-	public static final String JNDI_NAME = "jmws/entity/User";
+	public static final String JNDI_NAME = "jmws/entity/UserInfos";
 	
 	// Database table name
-	public static final String TABLE_NAME = "jmws_users";
+	public static final String TABLE_NAME = "jmws_userinfos";
+	
 	
 	/**
 	 * CMP fields
 	 */
 	
-	public abstract String getLogin();
-	public abstract void setLogin(String login);
+	public abstract Long getId();
+	public abstract void setId(Long id);
 	
-	public abstract String getPassword();
-	public abstract void setPassword(String password);
-	
-	public abstract Boolean getActive();
-	public abstract void setActive(Boolean active);
 	
 	
 	/**
 	 * CMR fields
 	 */
-	public abstract UserInfosLocal getTheUserInfos();
-	public abstract void setTheUserInfos(UserInfosLocal theUserInfos);
-	
-	public abstract Collection getTheActivatedUsers();
-	public abstract void setTheActivatedUsers(Collection theActivatedUsers);
-	
-	public abstract UserLocal getTheActivator();
-	public abstract void setTheActivator(UserLocal theActivator);	
 
+	public abstract UserLocal getTheUser();
+	public abstract void setTheUser(UserLocal theUser);
 
+	
+	
 	/**
-	 * Create a new User.
+	 * Create a User informations bean.
 	 * 
-	 * @param login
-	 * @param password
+	 * @param id
 	 * @return
 	 * @throws CreateException
 	 */
-	public String ejbCreate(
-		String login,
-		String password
-	) throws CreateException {
+	public Long ejbCreate(Long id) throws CreateException {
 		// Set fields
-		this.setLogin(login);
-		this.setPassword(password);
+		this.setId(id);
 		
-		// Return User primary key
-		return login;
+		// Return UserInfos primary key
+		return id;
 	}
-	
 	
 	/**
-	 * Code to process after User's creation.
+	 * Code to process after UserInfos' creation.
 	 * 
-	 * @param login
-	 * @param password
+	 * @param id
 	 * @throws CreateException
 	 */
-	public void ejbPostCreate(
-		String login,
-		String password
-	) throws CreateException {
-		
+	public void ejbPostCreate(Long id) throws CreateException {
 	}
+	
 
 
 	public void ejbActivate() throws EJBException, RemoteException {
@@ -137,6 +118,5 @@ public abstract class User implements EntityBean {
 
 	public void unsetEntityContext() throws EJBException, RemoteException {
 	}
-
 
 }

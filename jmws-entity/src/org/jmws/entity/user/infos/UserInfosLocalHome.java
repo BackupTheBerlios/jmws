@@ -2,8 +2,8 @@
  * +---------------------------------------------------------------------------+
  * | JMWS - Java Managed Web System                                            |
  * +---------------------------------------------------------------------------+
- * | UserLocal - Defines the EntityBean Local interface for                    |
- * |             the default User.                                             |
+ * | UserInfosLocalHome - Defines the EntityBean LocalHome                     |
+ * |                      interface for the default UserInfos.                 |
  * +---------------------------------------------------------------------------+
  * | Copyright (C) 2000,2001 by the following authors:                         |
  * |                                                                           |
@@ -27,24 +27,38 @@
  * +---------------------------------------------------------------------------+
  */
  
-package org.jmws.entity.user;
+package org.jmws.entity.user.infos;
 
-import javax.ejb.EJBLocalObject;
+import javax.ejb.CreateException;
+import javax.ejb.EJBLocalHome;
+import javax.ejb.FinderException;
 
-public interface UserLocal extends EJBLocalObject {
+
+/**
+ * UserInfosLocalHome
+ * 
+ * @author Mikael Barbeaux
+ */
+public interface UserInfosLocalHome extends EJBLocalHome {
+
+	/**
+	 * Create a UserInfos bean.
+	 * 
+	 * @param id
+	 * @return
+	 * @throws CreateException
+	 */
+	public UserInfosLocal create(Long id) throws CreateException;
+	
 	
 	/**
-	 * Set the active state of this User.
+	 * Find a UserInfos by its primary key field.
 	 * 
-	 * @param active
+	 * @param id
+	 * @return
+	 * @throws FinderException
 	 */
-	public void setActive(Boolean active);
-	
-	/**
-	 * Set the Activator of this User.
-	 * 
-	 * @param activator
-	 */
-	public void setTheActivator(UserLocal theActivator);
-	
+	public UserInfosLocal findByPrimaryKey(Long id)
+		throws FinderException;
+
 }
