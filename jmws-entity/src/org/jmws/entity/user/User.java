@@ -93,6 +93,7 @@ public abstract class User implements EntityBean {
 		// Set fields
 		this.setLogin(login);
 		this.setPassword(password);
+		this.setActive(Boolean.FALSE);
 		
 		// Return User primary key
 		return login;
