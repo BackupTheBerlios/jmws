@@ -26,7 +26,11 @@
 # This also helps in backtracking changes, or reviewing development history.  #
 ###############################################################################
 
-
+2004/03/24 Mikael Barbeaux
+	* Implemented Sequence diagram for User activation.
+	* Implemented Sequence diagram for User creation.
+	* Started Logical View.
+	* Implemented a first Activity diagram.
 	* Move Use Case diagrams into their proper directory.
 	* Added the User and Group Management Use Case diagrams.
 	* Added the News Moderator in the Use Case diagram.
