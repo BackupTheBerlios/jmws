@@ -29,6 +29,6 @@
 
 <h1>Un Exemple de BODY</h1>
 Voici un exemple de BODY<br><br>
-<a href="/jmws/body.jsp">Test d'un lien</a>
+<a href="<%= request.getContextPath() %>/body.jsp">Test d'un lien</a>
 <br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>

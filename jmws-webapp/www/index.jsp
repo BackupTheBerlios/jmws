@@ -28,6 +28,7 @@
 --%>
 
 <%@ taglib uri="/WEB-INF/struts-tiles.tld" prefix="tiles" %>
+<%@ taglib uri="/WEB-INF/jmws.tld" prefix="jmws" %>
 
 <%-- Using default template --%>
 <tiles:insert definition="jmws.default.index" />

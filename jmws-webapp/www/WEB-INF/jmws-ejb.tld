@@ -6,7 +6,7 @@
 <taglib>
 	<tlibversion>1.0</tlibversion>
 	<jspversion>1.1</jspversion>
-	<shortname>EJBtaglib</shortname>
+	<shortname>JMWS EJB taglib</shortname>
 	<uri>http://jmws.dyndns.org:8082</uri>
 	
 	<tag>
