@@ -50,7 +50,8 @@ public class TestUserCreation {
 			
 			// Create the new User
 			remote.addUser(login, password, Boolean.FALSE);
-			System.out.println("-==== USER CREATED ====-");				
+			System.out.println("-==== USER CREATED ====-");
+						
 			
 		}
 		catch(Exception e) {

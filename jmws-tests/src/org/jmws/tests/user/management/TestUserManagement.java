@@ -40,12 +40,16 @@ public class TestUserManagement {
 			UserManagementRemote remote = home.create();
 			
 			// Displaying all inactive users
+			System.out.println("1");
 			Collection users = remote.getUsersToActive();
+			System.out.println("2");
 			Iterator it = users.iterator();
+			System.out.println("3");
 			System.out.println("Inactive Users:");
 			while(it.hasNext()) {
 				String user = (String) it.next();
-				System.out.println("- " + user);
+				System.out.println("4");
+				System.out.println(" " + user);
 			}
 			System.out.println();			
 			
