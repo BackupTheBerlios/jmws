@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module context-root="/jmws-webapp" name="jmws-webapp"
+    archive="jmws-webapp.war" type="WEB" id="myeclipse.1078239244468">
+    <attributes>
+        <attribute name="webrootdir" value="www"/>
+    </attributes>
+</project-module>

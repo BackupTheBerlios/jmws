@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module name="jmws-session" archive="jmws-session.jar"
+    type="EJB" id="myeclipse.1078239291953">
+    <attributes>
+        <attribute name="srcdir" value="src"/>
+    </attributes>
+</project-module>

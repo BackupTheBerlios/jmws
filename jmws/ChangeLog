@@ -1,0 +1,31 @@
+                   ---------------------
+                   |Changelog for JMWS |
+                   ---------------------
+                   
+###############################################################################
+#     Notice about JMWS  Changelog usage and formatting.                      #
+#                                                                             #
+# Please use ONLY the following formatting in this Changelog:                 #
+# @DATE @PERSON                                                               #
+# 	* @CHANGE                                                                 #
+#                                                                             #
+# @DATE is date of commiting to CVS (changes that are not commited to         #
+#	CVS should NEVER be added to Changelog). Local time is ok.                #
+# @PERSON is the full REAL name of the one commiting to CVS (not necceserely  #
+#	the code author). If you wish to add your nick/handle, add it after       #
+#	your name in parenthesis.                                                 #
+# @CHANGE is a short description of the modification done. If you are not     #
+#	the author of parts/all of the code, add note about the original          #
+#	author in parenthesis.                                                    #
+#                                                                             #
+# ALWAYS keep line lenghts UNDER/AT 80 characters.                            #
+# ALL ChangeLog entries end with a dot.                                       #
+#                                                                             #
+# The purpose of this Changelog is not to keep track of all changes to CVS    #
+# (thats what CVS logs are for), but rather as a diary for code changing.     #
+# This also helps in backtracking changes, or reviewing development history.  #
+###############################################################################
+
+2004/03/02 Mikael Barbeaux
+	* Change context root for Web Application.
+	* First revision of the project.

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module name="jmws-entity" archive="jmws-entity.jar" type="EJB" id="myeclipse.1078239244671">
+    <attributes>
+        <attribute name="srcdir" value="src"/>
+    </attributes>
+</project-module>

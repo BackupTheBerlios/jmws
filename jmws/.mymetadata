@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise-project version="1.0.0" name="jmws" archive="jmws.ear" id="myeclipse.1078239244875">
+    <project-modules>
+        <project-module context-root="/jmws-webapp" name="jmws-webapp"
+            archive="jmws-webapp.war" type="WEB" id="myeclipse.1078239244468">
+            <attributes>
+                <attribute name="webrootdir" value="www"/>
+            </attributes>
+        </project-module>
+        <project-module name="jmws-entity" archive="jmws-entity.jar"
+            type="EJB" id="myeclipse.1078239244671">
+            <attributes>
+                <attribute name="srcdir" value="src"/>
+            </attributes>
+        </project-module>
+        <project-module name="jmws-session" archive="jmws-session.jar"
+            type="EJB" id="myeclipse.1078239291953">
+            <attributes>
+                <attribute name="srcdir" value="src"/>
+            </attributes>
+        </project-module>
+    </project-modules>
+</enterprise-project>
