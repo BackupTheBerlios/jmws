@@ -35,6 +35,16 @@ import javax.ejb.CreateException;
 import javax.ejb.EJBException;
 import javax.ejb.SessionBean;
 import javax.ejb.SessionContext;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import org.jmws.entity.user.User;
+import org.jmws.entity.user.UserLocal;
+import org.jmws.entity.user.UserLocalHome;
+import org.jmws.entity.user.infos.UserInfos;
+import org.jmws.entity.user.infos.UserInfosLocal;
+import org.jmws.entity.user.infos.UserInfosLocalHome;
+import org.jmws.session.pkgenerator.PKGeneratorUtils;
 
 /**
  * UserCreation
@@ -57,12 +67,53 @@ public class UserCreation implements SessionBean {
 	 */
 	public String addUser(
 		String login,
-		String password
+		String password,
+		Boolean active
 	) throws CreateException {
 		
-		return login;
+		try {
+			// JNDI context naming
+			InitialContext context = new InitialContext();
+			
+			// Get UserLocalHome interface
+			UserLocalHome home;
+			Object obj = context.lookup(User.JNDI_NAME);
+			home = (UserLocalHome) obj;
+			
+			// Create the new User
+			UserLocal local = home.create(login, password);
+		
+			// Set active state
+			local.setActive(active);
+			
+			
+			// Get UserInfosLocalHome
+			UserInfosLocalHome infos_home;
+			obj = context.lookup(UserInfos.JNDI_NAME);
+			infos_home = (UserInfosLocalHome) obj;
+			
+			// Get next primary key for UserInfos
+			Long pk = PKGeneratorUtils.getNextPK(UserInfos.TABLE_NAME);
+			
+			// Create the new UserInfos
+			UserInfosLocal infos_local = infos_home.create(pk);
+			
+			
+			// Set User's UserInfos
+			local.setTheUserInfos(infos_local);
+		
+		
+			// Return User's primary key
+			return login;
+		}
+		catch(NamingException ne) {
+			throw new CreateException("NamingException: " + 
+				ne.getMessage());
+		}
 	}
 
+	public void ejbCreate() throws CreateException {
+	}
 
 	public void ejbActivate() throws EJBException, RemoteException {
 	}

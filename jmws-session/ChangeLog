@@ -27,6 +27,7 @@
 ###############################################################################
 
 2004/03/25 Mikael Barbeaux
+	* Implemented addUser method of UserCreation.
 	* Implemented first version of UserCreation session bean.
 
 2004/03/24 Mikael Barbeaux

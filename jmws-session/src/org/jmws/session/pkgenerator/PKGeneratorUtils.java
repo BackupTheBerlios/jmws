@@ -2,8 +2,7 @@
  * +---------------------------------------------------------------------------+
  * | JMWS - Java Managed Web System                                            |
  * +---------------------------------------------------------------------------+
- * | UserCreationRemote - Defines the SessionBean Remote interface             |
- * |                      for the User creation operation.                     |
+ * | PKGeneratorUtils - Defines a Java class for managing PKGenerators.        |
  * +---------------------------------------------------------------------------+
  * | Copyright (C) 2000,2001 by the following authors:                         |
  * |                                                                           |
@@ -26,36 +25,59 @@
  * |                                                                           |
  * +---------------------------------------------------------------------------+
  */
+ 
+package org.jmws.session.pkgenerator;
 
-package org.jmws.session.user.creation;
-
-import java.rmi.RemoteException;
 import javax.ejb.CreateException;
-import javax.ejb.EJBObject;
+import javax.ejb.FinderException;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import org.jmws.entity.pkgenerator.PKGenerator;
+import org.jmws.entity.pkgenerator.PKGeneratorLocal;
+import org.jmws.entity.pkgenerator.PKGeneratorLocalHome;
 
 /**
- * UserCreationRemote
+ * PKGeneratorUtils
  * 
  * @author Mikael Barbeaux
  */
-public interface UserCreationRemote extends EJBObject {
-
+public class PKGeneratorUtils {
 
 	/**
-	 * Create a new User into the database.
+	 * Returns the next primary key value of the given
+	 * table name.
 	 * 
-	 * @param login
-	 * @param password
-	 * @param active
+	 * @param table
 	 * @return
-	 * @throws CreateException - In case of creation problems
-	 * @throws RemoteException - In case of network problems
+	 * @throws NamingException - If PKGenerator doesn't exist
+	 * @throws CreateException - If cannot create generator for table
 	 */
-	public String addUser(
-		String login,
-		String password,
-		Boolean active
-	) throws CreateException, RemoteException;
-	
-	
+	public static Long getNextPK(String table)
+			throws NamingException, CreateException {
+		
+		// JNDI context naming
+		InitialContext context = new InitialContext();
+		
+		// Get PKGeneratorLocalHome interface
+		PKGeneratorLocalHome home;
+		Object obj = context.lookup(PKGenerator.JNDI_NAME);
+		home = (PKGeneratorLocalHome) obj;
+		
+		/* Try to retrieve the PKGeneratorLocal object 
+		 * associated to the given table name */
+		PKGeneratorLocal local = null;
+		try {
+			local = home.findByPrimaryKey(table);  
+		}
+		catch(FinderException fe) {
+			/* PKGeneratorLocal object hasn't been found, so 
+			 * we need to create it. */
+			local = home.create(table);
+		}
+		
+		// Return next primary key value of the given table name
+		return local.getNextPK();
+	}
+
 }
