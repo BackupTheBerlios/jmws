@@ -26,6 +26,9 @@
 # This also helps in backtracking changes, or reviewing development history.  #
 ###############################################################################
 
+2004/03/25 Mikael Barbeaux
+	* Updated Classes diagrams for User and UserInfos.
+
 2004/03/24 Mikael Barbeaux
 	* Implemented Sequence diagram for User activation.
 	* Implemented Sequence diagram for User creation.
