@@ -30,7 +30,6 @@ package org.jmws.entity.user;
 
 import java.rmi.RemoteException;
 import java.util.Collection;
-
 import javax.ejb.CreateException;
 import javax.ejb.EJBException;
 import javax.ejb.EntityBean;

@@ -29,13 +29,11 @@
 package org.jmws.entity.user.infos;
 
 import java.rmi.RemoteException;
-
 import javax.ejb.CreateException;
 import javax.ejb.EJBException;
 import javax.ejb.EntityBean;
 import javax.ejb.EntityContext;
 import javax.ejb.RemoveException;
-
 import org.jmws.entity.user.UserLocal;
 
 /**

@@ -3,17 +3,24 @@
 	"-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" 
 	"http://java.sun.com/dtd/ejb-jar_2_0.dtd">
 
-
 <ejb-jar>
 
 	<description><![CDATA[No Description.]]></description>
 	<display-name>ejb-jar.xml - JMWS entity</display-name>
 	
 	
+	<!--
+		Deployment descriptor for EJBs objects.
+	
+		JMWS - Written by Mikael Barbeaux
+	-->
+	
 	<enterprise-beans>
 	
+	
+		<!-- Entity Bean : User -->
+	
 		<entity>
-			
 			<display-name>User EntityBean</display-name>
 			<ejb-name>User</ejb-name>
 			<local-home>org.jmws.entity.user.UserLocalHome</local-home>
@@ -52,9 +59,12 @@
 				<ejb-ql>SELECT OBJECT(u) FROM User u
 							WHERE u.active = ?1					
 				</ejb-ql>
-			</query>		
-		
+			</query>
 		</entity>
+		
+		
+		
+		<!-- Entity Bean : UserInfos -->
 		
 		<entity>
 
@@ -76,17 +86,18 @@
 			</cmp-field>
 			
 			<primkey-field>id</primkey-field>		
-		
 		</entity>
 	
 	</enterprise-beans>
 
 
+	<!-- Relationships between EJBs : CMR -->
 
 	<relationships>
 	
+		<!-- Relation between User and his UserInfos -->
+		
 		<ejb-relation>
-			
 			<description>One User, One UserInfos</description>
 			<ejb-relation-name>1User-1UserInfos</ejb-relation-name>
 			
@@ -119,8 +130,10 @@
 					<cmr-field-name>theUserInfos</cmr-field-name>
 				</cmr-field>
 			</ejb-relationship-role>
-			
 		</ejb-relation>
+		
+		
+		<!-- Relation between Users and their Activator -->
 		
 		<ejb-relation>
 			
@@ -158,7 +171,6 @@
 					<cmr-field-type>java.util.Collection</cmr-field-type>
 				</cmr-field>
 			</ejb-relationship-role>
-			
 		</ejb-relation>
 	
 	</relationships>
