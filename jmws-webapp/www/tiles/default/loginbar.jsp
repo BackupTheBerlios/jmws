@@ -32,6 +32,12 @@
 <tr>
 	<td><a href="#" class="black">Log in</a></td>
 	<td><a href="#" class="black">Register an account</a></td>
+	<td align="center">
+		<input type="text" value="User Name">
+		<input type="password" value="Password">
+		<input type="button" value="Log in">
+	</td>
+	
 	<td align=right>Welcome, <b>Administrator</b></td>
 </tr>
 </table>
