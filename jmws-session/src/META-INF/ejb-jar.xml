@@ -1,56 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ejb-jar PUBLIC 
 	"-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN" 
-	"file://ejb-jar_2_0.dtd">
+	"http://java.sun.com/dtd/ejb-jar_2_0.dtd">
 
-<ejb-jar>
-
-	<description><![CDATA[No Description.]]></description>
-	<display-name>ejb-jar.xml - JMWS session</display-name>
-	
-	<enterprise-beans>
-		
-		<session>
-			<display-name>CreateUser SessionBean</display-name>
-			<ejb-name>CreateUser</ejb-name>
-			<home>org.jmws.session.user.CreateUserHome</home>
-			<remote>org.jmws.session.user.CreateUserRemote</remote>
-			<ejb-class>org.jmws.session.user.CreateUserBean</ejb-class>
-			<session-type>Stateless</session-type>
-			<transaction-type>Container</transaction-type>
-		</session>
-		
-		<session>
-			<display-name>UpdateUser SessionBean</display-name>
-			<ejb-name>UpdateUser</ejb-name>
-			<home>org.jmws.session.user.UpdateUserHome</home>
-			<remote>org.jmws.session.user.UpdateUserRemote</remote>
-			<ejb-class>org.jmws.session.user.UpdateUserBean</ejb-class>
-			<session-type>Stateless</session-type>
-			<transaction-type>Container</transaction-type>
-		</session>
-		
-		<session>
-			<display-name>UserInfos SessionBean</display-name>
-			<ejb-name>UserInfos</ejb-name>
-			<home>org.jmws.session.user.UserInfosHome</home>
-			<remote>org.jmws.session.user.UserInfosRemote</remote>
-			<ejb-class>org.jmws.session.user.UserInfosBean</ejb-class>
-			<session-type>Stateless</session-type>
-			<transaction-type>Container</transaction-type>
-		</session>
-		
-		<session>
-			<display-name>UserLogin SessionBean</display-name>
-			<ejb-name>UserLogin</ejb-name>
-			<home>org.jmws.session.connect.UserLoginHome</home>
-			<remote>org.jmws.session.connect.UserLoginRemote</remote>
-			<ejb-class>org.jmws.session.connect.UserLoginBean</ejb-class>
-			<session-type>Stateless</session-type>
-			<transaction-type>Container</transaction-type>			
-		</session>
-		
-	</enterprise-beans>
-	
-
-</ejb-jar>

@@ -27,29 +27,4 @@
 ###############################################################################
 
 2004/03/24 Mikael Barbeaux
-	* Fixed a bug into dtd files uri.
-	* Added every dtd files for XML validation.
-
-2004/03/04 Mikael Barbeaux
-	* Externalized some Session key constants.
-	* Implemented the Struts Action for logging out.
-	* Implemented the Struts Action for logging in.
-	* Implemented a login form in index.jsp
-	* Fixed a bug about password encryption.
-	* Added MD5 encryption for User password (thanks to Henri Torgemane
-	for the MD5 encryption tool).
-	* Implemented the Struts Action for updating user's settings.
-	* Added a Struts FormValidator for User creation.
-	* Wrote the Struts Action for updating user's settings.
-	* Wrote the usersettings.jsp file
-	* Wrote the Struts Action for creating a new user.
-	* Wrote the newuser.jsp file
-
-2004/03/02 Mikael Barbeaux
-	* Added TagExtraInfo into the EJB taglib.
-	* Wrote a taglib for iterating EJB instances into JSP.
-	* Wrote a taglib for creating EJB Object into JSP.
-	* Wrote a taglib for accessing EJB Object into JSP.
-	* Wrote a taglib for accessing EJB Home interfaces into JSP.
-	* Added ApplicationResources files for English and French languages.
 	* First revision of the project.

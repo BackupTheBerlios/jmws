@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE web-app PUBLIC 
 	"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" 
-	"file://web-app_2_3.dtd">
+	"http://jakarta.apache.org/struts/dtds/web-app_2_3.dtd">
 	
 	
 <web-app>

@@ -26,21 +26,6 @@
 # This also helps in backtracking changes, or reviewing development history.  #
 ###############################################################################
 
+
 2004/03/24 Mikael Barbeaux
-	* Fixed a bug into dtd files uri.
-	* Added every dtd files for XML validation.
-
-2004/03/04 Mikael Barbeaux.
-	* Fixed a Database mapping error with MySQL
-	* Implemented updateUser method into User bean.
-
-2004/03/03 Mikael Barbeaux
-	* Added a jaws.xml for JBoss Database mapping.
-	* Added a jbosscmp-jdbc.xml for JBoss Database configuration.
-	* Added a jboss.xml file for JBoss configuration.
-	* Implemented a PrimaryKey generator EntityBean.
-	* Added the getUser() method into UserLocal interface.
-	* Implemented User EntityBean.
-
-2004/03/02 Mikael Barbeaux
 	* First revision of the project.
