@@ -47,11 +47,12 @@ public class TestUserCreation {
 			String login = br.readLine();
 			System.out.print("Password: ");
 			String password = br.readLine();
+			System.out.print("E-mail: ");
+			String email = br.readLine();
 			
 			// Create the new User
-			remote.addUser(login, password, Boolean.FALSE);
-			System.out.println("-==== USER CREATED ====-");
-						
+			remote.addUser(login, password, email, Boolean.FALSE);
+			System.out.println("-==== USER CREATED ====-");				
 			
 		}
 		catch(Exception e) {
