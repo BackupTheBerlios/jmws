@@ -30,14 +30,12 @@
 package org.jmws.session.user.creation;
 
 import java.rmi.RemoteException;
-
 import javax.ejb.CreateException;
 import javax.ejb.EJBException;
 import javax.ejb.SessionBean;
 import javax.ejb.SessionContext;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-
 import org.jmws.entity.user.User;
 import org.jmws.entity.user.UserLocal;
 import org.jmws.entity.user.UserLocalHome;
@@ -62,12 +60,15 @@ public class UserCreation implements SessionBean {
 	 * 
 	 * @param login
 	 * @param password
+	 * @param email
+	 * @param active
 	 * @return
 	 * @throws CreateException - In case of creation problems
 	 */
 	public String addUser(
 		String login,
 		String password,
+		String email,
 		Boolean active
 	) throws CreateException {
 		
@@ -81,7 +82,7 @@ public class UserCreation implements SessionBean {
 			home = (UserLocalHome) obj;
 			
 			// Create the new User
-			UserLocal local = home.create(login, password);
+			UserLocal local = home.create(login, password, email);
 		
 			// Set active state
 			local.setActive(active);

@@ -46,6 +46,7 @@ public interface UserCreationRemote extends EJBObject {
 	 * 
 	 * @param login
 	 * @param password
+	 * @param email
 	 * @param active
 	 * @return
 	 * @throws CreateException - In case of creation problems
@@ -54,6 +55,7 @@ public interface UserCreationRemote extends EJBObject {
 	public String addUser(
 		String login,
 		String password,
+		String email,
 		Boolean active
 	) throws CreateException, RemoteException;
 	
