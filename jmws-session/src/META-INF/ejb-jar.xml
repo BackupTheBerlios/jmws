@@ -17,14 +17,27 @@
 	
 	<enterprise-beans>
 	
-	
 		<!-- Session Bean : UserCreation -->
+		
 		<session>
 			<display-name>UserCreation SessionBean</display-name>
 			<ejb-name>UserCreation</ejb-name>
 			<home>org.jmws.session.user.creation.UserCreationHome</home>
 			<remote>org.jmws.session.user.creation.UserCreationRemote</remote>
 			<ejb-class>org.jmws.session.user.creation.UserCreation</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Container</transaction-type>
+		</session>
+		
+		
+		<!-- Session Bean : UserManagement -->
+		
+		<session>
+			<display-name>UserManagement SessionBean</display-name>
+			<ejb-name>UserManagement</ejb-name>
+			<home>org.jmws.session.user.management.UserManagementHome</home>
+			<remote>org.jmws.session.user.management.UserManagementRemote</remote>
+			<ejb-class>org.jmws.session.user.management.UserManagement</ejb-class>
 			<session-type>Stateless</session-type>
 			<transaction-type>Container</transaction-type>
 		</session>

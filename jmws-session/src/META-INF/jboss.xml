@@ -13,6 +13,11 @@
 			<jndi-name>jmws/session/UserCreation</jndi-name>
 		</session>
 		
+		<session>
+			<ejb-name>UserManagement</ejb-name>
+			<jndi-name>jmws/session/UserManagement</jndi-name>
+		</session>		
+		
 	</enterprise-beans>
 	
 </jboss>	
