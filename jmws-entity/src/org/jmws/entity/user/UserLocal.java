@@ -29,11 +29,13 @@
  
 package org.jmws.entity.user;
 
+import java.io.Serializable;
+
 import javax.ejb.EJBLocalObject;
 
 import org.jmws.entity.user.infos.UserInfosLocal;
 
-public interface UserLocal extends EJBLocalObject {
+public interface UserLocal extends EJBLocalObject, Serializable {
 	
 	/**
 	 * Set the active state of this User.
@@ -55,5 +57,12 @@ public interface UserLocal extends EJBLocalObject {
 	 * @param theUserInfos
 	 */
 	public void setTheUserInfos(UserInfosLocal theUserInfos);
+	
+	/**
+	 * Returns the User login.
+	 * 
+	 * @return
+	 */
+	public String getLogin();
 	
 }

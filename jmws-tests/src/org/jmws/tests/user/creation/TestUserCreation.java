@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import javax.naming.InitialContext;
+import javax.rmi.PortableRemoteObject;
 
 import org.jmws.session.user.creation.UserCreation;
 import org.jmws.session.user.creation.UserCreationHome;
@@ -31,7 +32,9 @@ public class TestUserCreation {
 			// Get UserCreationHome interface
 			UserCreationHome home;
 			Object obj = context.lookup(UserCreation.JNDI_NAME);
-			home = (UserCreationHome) obj;
+			home = (UserCreationHome) 
+				PortableRemoteObject.narrow(obj, 
+					UserCreationHome.class);
 			
 			// Get UserCreationRemote interface
 			UserCreationRemote remote = home.create();
@@ -47,8 +50,7 @@ public class TestUserCreation {
 			
 			// Create the new User
 			remote.addUser(login, password, Boolean.FALSE);
-			System.out.println("-==== USER CREATED ====-");
-						
+			System.out.println("-==== USER CREATED ====-");				
 			
 		}
 		catch(Exception e) {

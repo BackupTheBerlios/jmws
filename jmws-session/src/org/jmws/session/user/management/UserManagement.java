@@ -30,7 +30,9 @@
 package org.jmws.session.user.management;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 import javax.ejb.CreateException;
 import javax.ejb.EJBException;
@@ -56,7 +58,7 @@ public class UserManagement implements SessionBean {
 
 
 	/**
-	 * Returns all inactive Users.
+	 * Returns all inactive Users logins.
 	 * 
 	 * @return
 	 * @throws FinderException
@@ -73,8 +75,19 @@ public class UserManagement implements SessionBean {
 			Object obj = context.lookup(User.JNDI_NAME);
 			home = (UserLocalHome) obj;
 			
-			// Returns all inactive Users
-			return home.findByActive(Boolean.FALSE);	
+			// Get all inactive Users
+			Collection users = home.findByActive(Boolean.FALSE);	
+			
+			// Build output collection with logins
+			Collection logins = new ArrayList();
+			Iterator it = users.iterator();
+			while(it.hasNext()) {
+				UserLocal user = (UserLocal) it.next();
+				logins.add(user.getLogin());
+			}
+			
+			// Returns the output collection
+			return logins;
 		}
 		catch(NamingException ne) {
 			throw new FinderException("NamingException: " + 

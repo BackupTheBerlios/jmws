@@ -43,7 +43,7 @@ import javax.ejb.FinderException;
 public interface UserManagementRemote extends EJBObject {
 
 	/**
-	 * Returns all inactive Users.
+	 * Returns all inactive Users logins.
 	 * 
 	 * @return
 	 * @throws FinderException
