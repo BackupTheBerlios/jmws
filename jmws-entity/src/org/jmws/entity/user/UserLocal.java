@@ -65,4 +65,18 @@ public interface UserLocal extends EJBLocalObject, Serializable {
 	 */
 	public String getLogin();
 	
+	/**
+	 * Returns the active state of this User.
+	 * 
+	 * @return
+	 */
+	public Boolean getActive();
+	
+	/**
+	 * Returns the User's password
+	 * 
+	 * @return
+	 */
+	public String getPassword();
+	
 }

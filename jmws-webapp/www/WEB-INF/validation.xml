@@ -4,6 +4,21 @@
           "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN"
           "http://jakarta.apache.org/struts/dtds/validation_1_1.dtd">
 
+<form-validation>
 
+	<formset>
+	
+		<form name="UserLogInForm">
+			<field property="login" depends="required">
+				<arg0 key="www.login.login" />
+			</field>
+			<field property="password" depends="required">
+				<arg0 key="www.login.password" />
+			</field>		
+		</form>
+	
+	</formset>
+
+</form-validation>
 
 
