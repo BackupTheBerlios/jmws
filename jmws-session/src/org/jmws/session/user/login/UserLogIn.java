@@ -35,6 +35,12 @@ import javax.ejb.EJBException;
 import javax.ejb.FinderException;
 import javax.ejb.SessionBean;
 import javax.ejb.SessionContext;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import org.jmws.entity.user.User;
+import org.jmws.entity.user.UserLocal;
+import org.jmws.entity.user.UserLocalHome;
 
 /**
  * UserLogIn
@@ -50,10 +56,35 @@ public class UserLogIn implements SessionBean {
 	) throws FinderException, UserWrongPasswordException,
 			UserInactiveException {
 	
-	
-	
-	
-		return Boolean.FALSE;
+		try {
+			// JNDI context naming
+			InitialContext context = new InitialContext();
+			
+			// Get UserLocalHome interface
+			UserLocalHome home;
+			Object obj = context.lookup(User.JNDI_NAME);
+			home = (UserLocalHome) obj;
+			
+			// Find the specified User
+			UserLocal user = home.findByPrimaryKey(login);
+			
+			// Check that User isn't inactive
+			if(! user.getActive().booleanValue()) {
+				throw new UserInactiveException("User " + login +
+					" is inactive");
+			}
+			
+			// Check that the password is correct
+			if(! user.getPassword().equals(password)) {
+				throw new UserWrongPasswordException("The specified" +					" password isn't correct.");
+			}
+			
+			// Everything is ok !
+			return Boolean.TRUE;
+		}
+		catch(NamingException ne) {
+			return Boolean.FALSE;
+		}
 	}
 
 	public void ejbCreate() throws CreateException {
