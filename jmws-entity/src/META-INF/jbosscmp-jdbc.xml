@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE jbosscmp-jdbc PUBLIC "-//JBoss//DTD JBOSSCMP-JDBC 3.2//EN" 
-	"http://www.jboss.org/j2ee/dtd/jbosscmp-jdbc_3_2.dtd">
+<!DOCTYPE jbosscmp-jdbc PUBLIC 
+	"-//JBoss//DTD JBOSSCMP-JDBC 3.2//EN" 
+	"jbosscmp-jdbc_3_2.dtd">
 
 <jbosscmp-jdbc>
-
-	<!-- Your JDBC database configuration 
-		Define here the database you want to use. 	 -->
 	
 	<defaults>
 	
-		<!-- Hypersonic SQL -->
-		<!--
-		<datasource>java:/DefaultDS</datasource>
-		<datasource-mapping>Hypersonic SQL</datasource-mapping>		
-		-->
-		
-		<!-- MySQL 4.x -->
-		<!--
-		<datasource>java:/MySqlDS</datasource>
-		<datasource-mapping>PostgreSQL 7.2</datasource-mapping>		
-		-->
-	
-		<!-- PostgreSQL 7.x -->
-		<datasource>java:/PostgresDS2</datasource>
+		<datasource>java:/PostgresDS</datasource>
 		<datasource-mapping>PostgreSQL 7.2</datasource-mapping>
 		
 		<create-table>true</create-table>
@@ -31,8 +16,6 @@
 		<read-time-out>300</read-time-out>	
 		<row-locking>false</row-locking>
 	</defaults>
-	
-	<!-- End of database configuration -->
 	
 	<enterprise-beans>
 		

@@ -26,6 +26,9 @@
 # This also helps in backtracking changes, or reviewing development history.  #
 ###############################################################################
 
+2004/03/24 Mikael Barbeaux
+	* Added every dtd files for XML validation.
+
 2004/03/04 Mikael Barbeaux
 	* Externalized some Session key constants.
 	* Implemented the Struts Action for logging out.

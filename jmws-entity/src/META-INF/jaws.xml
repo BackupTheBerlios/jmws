@@ -2,7 +2,7 @@
 
 <!DOCTYPE jaws PUBLIC
           "-//JBoss//DTD JAWS 2.4//EN"
-          "http://www.jboss.org/j2ee/dtd/jaws_3_0.dtd">
+          "jaws_3_0.dtd">
 
 <!-- ===================================================================== -->
 <!--                                                                       -->
@@ -10,7 +10,7 @@
 <!--                                                                       -->
 <!-- ===================================================================== -->
 
-<!-- $Id: jaws.xml,v 1.1 2004/03/06 08:30:47 mikaelbarbeaux Exp $ -->
+<!-- $Id: jaws.xml,v 1.2 2004/03/24 11:08:16 mikaelbarbeaux Exp $ -->
 
 <jaws>
    <datasource>java:/DefaultDS</datasource>
